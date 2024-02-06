@@ -69,14 +69,135 @@
 
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
-# TODO!
+Movie.destroy_all
+Actor.destroy_all
+Studio.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
-# TODO!
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+
+# Movies
+
+new_movie = Movie.new
+new_movie["Name"] = "Batman Begins"
+new_movie["Year_Released"] = "2005"
+new_movie["Rating"] = "PG-13"
+new_movie.save
+
+new_movie = Movie.new
+new_movie["Name"] = "The Dark Knight"
+new_movie["Year_Released"] = "2008"
+new_movie["Rating"] = "PG-13"
+new_movie.save
+
+new_movie = Movie.new
+new_movie["Name"] = "The Dark Knight Rises"
+new_movie["Year_Released"] = "2012"
+new_movie["Rating"] = "PG-13"
+new_movie.save
+
+# Actors
+
+new_actor = Actor.new
+new_actor["Name"] = "Christian Bale"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Michael Caine"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Liam Neeson"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Katie Holmes"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Gary Oldman"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Heath Ledger"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Aaron Eckhart"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Maggie Gyllenhaal"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Tom Hardy"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Joseph Gordon-Levitt"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["Name"] = "Anne Hathaway"
+new_actor.save
+
+# Roles
+new_role = Role.new
+new_role["Character Name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Comissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Joker"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Harvey Dent"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Bane"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "John Blake"
+new_role.save
+
+new_role = Role.new
+new_role["Character Name"] = "Selina Kyle"
+new_role.save
+
+# Studios
+
+new_studio = Studio.new
+new_studio["Name"] = "Warner Bros."
+new_studio.save
+
+# Check
+puts Movie.all.count
+puts Actor.all.count
+puts Studio.all.count
+puts Role.all.count
 
 # Prints a header for the movies output
 puts "Movies"
@@ -84,7 +205,8 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+christian_bale = Actor.find_by({"name" => "Christian Bale"})
+puts christian_bale["id"]
 
 # Prints a header for the cast output
 puts ""
@@ -93,4 +215,4 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
-# TODO!
+
