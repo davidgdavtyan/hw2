@@ -4,6 +4,7 @@ class CreateMovies < ActiveRecord::Migration[7.1]
       t.string "Name"
       t.integer "Year_Released"
       t.string "Rating"
+      t.integer "studio_id"
       t.timestamps
     end
   end
